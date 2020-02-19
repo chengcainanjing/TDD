@@ -1,9 +1,8 @@
 package test;
 
-
 import main.FizzBuzz;
 import org.junit.Assert;
-import org.junit.Assert.*;
+//import org.junit.Assert.*;
 import org.junit.Test;
 
 /**
