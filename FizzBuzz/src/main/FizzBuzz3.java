@@ -20,7 +20,7 @@ public class FizzBuzz3 {
         if (Num % 15 == 0) result += "FizzBuzz";
         else if (Num % 3 == 0) result += "Fizz";
         else if (Num % 5 == 0) result += "Buzz";
-        else (result.length() == 0) result += Num;
+        else  result += "Num";
 
         return result;
     }
