@@ -29,14 +29,15 @@ public class FizzBuzz2 {
     private static String Buzz = "Buzz";
 
     public static String pass(int Num) {
-        if (isRelatedTo(Num, 3) && isRelatedTo(Num, 5)) return FizzBuzz;
-        if (isRelatedTo(Num,3)) return Fizz;
-        if (isRelatedTo(Num,5)) return Buzz;
+        FizzBuzz2 fizzBuzz2 = new FizzBuzz2();
+        if (fizzBuzz2.isRelatedTo(Num, 3) && fizzBuzz2.isRelatedTo(Num, 5)) return FizzBuzz;
+        if (fizzBuzz2.isRelatedTo(Num,3)) return Fizz;
+        if (fizzBuzz2.isRelatedTo(Num,5)) return Buzz;
 
         return valueOf(Num);
     }
 
-    private static boolean isRelatedTo(int Num, int i) {
+    private boolean isRelatedTo(int Num, int i) {
         return ((Num % i) == 0) || valueOf(Num).contains(valueOf(i));
     }
 }
