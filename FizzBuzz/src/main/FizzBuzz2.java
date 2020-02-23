@@ -1,5 +1,9 @@
 package main;
 
+//import static jdk.nashorn.internal.objects.NativeBoolean.valueOf;
+
+import static java.lang.String.valueOf;
+
 /**
  * This program demonstrates FizzBuzz2.
  * 程序功能：
@@ -11,16 +15,28 @@ package main;
  *
  * 4.既能被3整除、又能被5整除的数则替换成“FizzBuzz”
  *
+ * 5.如果一个数能被3整除，或者包含数字3，那么这个数就是“Fizz”；
+ *
+ * 6. 如果一个数能被5整除，或者包含数字5，那么这个数就是“Buzz”。
+ *
  * @author chengcai
- * @version 1.0 2020.02.22
+ * @version 2.0 2020.02.23
  */
 
 public class FizzBuzz2 {
-    public static String pass(int Num) {
-        if ((Num % 15) == 0) return "FizzBuzz";
-        if ((Num % 3) == 0) return "Fizz";
-        if ((Num % 5) == 0) return "Buzz";
+    private static String FizzBuzz = "FizzBuzz";
+    private static String Fizz = "Fizz";
+    private static String Buzz = "Buzz";
 
-        return String.valueOf(Num);
+    public static String pass(int Num) {
+        if (isRelatedTo(Num, 3) && isRelatedTo(Num, 5)) return FizzBuzz;
+        if (isRelatedTo(Num,3)) return Fizz;
+        if (isRelatedTo(Num,5)) return Buzz;
+
+        return valueOf(Num);
+    }
+
+    private static boolean isRelatedTo(int Num, int i) {
+        return ((Num % i) == 0) || valueOf(Num).contains(valueOf(i));
     }
 }

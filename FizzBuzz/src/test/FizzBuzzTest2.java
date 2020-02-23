@@ -4,40 +4,56 @@ import main.FizzBuzz2;
 import org.junit.Assert;
 import org.junit.Test;
 
-
 /**
  * This program demonstrates FizzBuzzTest2.
  * 程序功能：
  * 1.打印出从1到100的数字
- *
+ * <p>
  * 2.将其中3的倍数替换成“Fizz”
- *
+ * <p>
  * 3.5的倍数替换成“Buzz”
- *
+ * <p>
  * 4.既能被3整除、又能被5整除的数则替换成“FizzBuzz”
  *
+ * 5.如果一个数能被3整除，或者包含数字3，那么这个数就是“Fizz”；
+ *
+ * 6. 如果一个数能被5整除，或者包含数字5，那么这个数就是“Buzz”。
+ *
  * @author chengcai
- * @version 1.0 2020.02.22
+ * @version 2.0 2020.02.23
  */
 
 public class FizzBuzzTest2 {
     @Test
-    public void printNum() {
-        Assert.assertEquals(FizzBuzz2.pass(1), "1");
+    public void input_Num_Output_Num() {
+        assertEquals(1,"1");
     }
 
     @Test
-    public void Input_3_Output_Fizz() {
-        Assert.assertEquals(FizzBuzz2.pass(3), "Fizz");
+    public void input_Contains_3_Output_Fizz() {
+        assertEquals(3,"Fizz");
     }
 
     @Test
-    public void Input_5_Output_Buzz() {
-        Assert.assertEquals(FizzBuzz2.pass(5), "Buzz");
+    public void input_3_Output_Fizz() {
+        assertEquals(3,"Fizz");
     }
 
     @Test
-    public void Input_15_Output_FizzBuzz() {
-        Assert.assertEquals(FizzBuzz2.pass(15), "FizzBuzz");
+    public void input_Contains_5_Output_Buzz() {
+        assertEquals(5,"Buzz");
+    }
+    @Test
+    public void input_5_Output_Buzz() {
+        assertEquals(5,"Buzz");
+    }
+
+    @Test
+    public void input_15_Output_FizzBuzz() {
+        assertEquals(15,"FizzBuzz");
+    }
+
+    private void assertEquals(int Num, String string) {
+        Assert.assertEquals(FizzBuzz2.pass(Num),string);
     }
 }
