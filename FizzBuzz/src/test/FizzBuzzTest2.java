@@ -20,7 +20,7 @@ import org.junit.Test;
  * 6. 如果一个数能被5整除，或者包含数字5，那么这个数就是“Buzz”。
  *
  * @author chengcai
- * @version 2.0 2020.02.23
+ * @version 3.0 2020.02.24
  */
 
 public class FizzBuzzTest2 {
@@ -30,26 +30,21 @@ public class FizzBuzzTest2 {
     }
 
     @Test
-    public void input_Contains_3_Output_Fizz() {
+    public void input_Related_3_Output_Fizz() {
         assertEquals(3,"Fizz");
+        assertEquals(13,"Fizz");
+        assertEquals(9,"Fizz");
+        assertEquals(27,"Fizz");
     }
 
     @Test
-    public void input_3_Output_Fizz() {
-        assertEquals(3,"Fizz");
-    }
-
-    @Test
-    public void input_Contains_5_Output_Buzz() {
-        assertEquals(5,"Buzz");
-    }
-    @Test
-    public void input_5_Output_Buzz() {
+    public void input_Related_5_Output_Buzz() {
+        assertEquals(52,"Buzz");
         assertEquals(5,"Buzz");
     }
 
     @Test
-    public void input_15_Output_FizzBuzz() {
+    public void input_Related_15_Output_FizzBuzz() {
         assertEquals(15,"FizzBuzz");
     }
 

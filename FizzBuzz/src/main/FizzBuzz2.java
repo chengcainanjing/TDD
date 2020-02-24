@@ -1,7 +1,5 @@
 package main;
 
-//import static jdk.nashorn.internal.objects.NativeBoolean.valueOf;
-
 import static java.lang.String.valueOf;
 
 /**
@@ -20,7 +18,7 @@ import static java.lang.String.valueOf;
  * 6. 如果一个数能被5整除，或者包含数字5，那么这个数就是“Buzz”。
  *
  * @author chengcai
- * @version 2.0 2020.02.23
+ * @version 3.0 2020.02.24
  */
 
 public class FizzBuzz2 {
@@ -31,9 +29,8 @@ public class FizzBuzz2 {
     public static String pass(int Num) {
         FizzBuzz2 fizzBuzz2 = new FizzBuzz2();
         if (fizzBuzz2.isRelatedTo(Num, 3) && fizzBuzz2.isRelatedTo(Num, 5)) return FizzBuzz;
-        if (fizzBuzz2.isRelatedTo(Num,3)) return Fizz;
-        if (fizzBuzz2.isRelatedTo(Num,5)) return Buzz;
-
+        if (fizzBuzz2.isRelatedTo(Num, 3)) return Fizz;
+        if (fizzBuzz2.isRelatedTo(Num, 5)) return Buzz;
         return valueOf(Num);
     }
 
