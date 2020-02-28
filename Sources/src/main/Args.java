@@ -3,6 +3,12 @@ package main;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author chengcai
+ * @version 1.0 2020.02.28
+ */
+
+
 public class Args {
     public static String strArrayCmd = "";
     Map<String, String> values = new HashMap<>();
@@ -19,21 +25,17 @@ public class Args {
                         if (arrayCmd[i + 1].charAt(0) != '-' || arrayCmd[i + 1].length() > 2) {
                             name = arrayCmd[i];
                             value = arrayCmd[i + 1];
-//                            System.out.println("name" + ":" + name + ";" + "value" + ":" + value);
                             values.put(name, value);
                             i++;
                         }
-//                        else if (arrayCmd[i + 1].charAt(1) >= 0 && arrayCmd[i + 1].charAt(1) <= 9) {
                         else if (Character.getNumericValue(arrayCmd[i + 1].charAt(1)) <= 9 && Character.getNumericValue(arrayCmd[i + 1].charAt(1)) >= 0 ) {
                             name = arrayCmd[i];
                             value = arrayCmd[i + 1];
-//                            System.out.println("name" + ":" + name + ";" + "value" + ":" + value);
                             values.put(name, value);
                             i++;
                         } else {
                             name = arrayCmd[i];
                             value = null;
-//                            System.out.println("name" + ":" + name + ";" + "value" + ":" + value);
                             values.put(name, value);
                         }
                     } else {
@@ -45,7 +47,6 @@ public class Args {
             }
         }
     }
-
 
     private boolean isValue(String value) {
         if (value.charAt(0) == '-') {
