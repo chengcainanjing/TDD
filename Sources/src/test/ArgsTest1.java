@@ -36,9 +36,6 @@ public class ArgsTest1 {
     @Test
     public void testCmdFormat(){
         Args1 args=new Args1("l -p -9 -d /usr/local");
-        assertEquals(false,args.getCmdFormat("l"));
-        assertEquals(false,args.getCmdFormat("-l"));
-        assertEquals(false,args.getCmdFormat("l -p -9"));
         assertEquals(false,args.getCmdFormat("l -p -9 -d /usr/local"));
         assertEquals(true,args.getCmdFormat("-l -p -9 -d /usr/local -g this,is,a,list"));
     }
