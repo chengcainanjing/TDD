@@ -5,7 +5,7 @@ import org.junit.Test;
 
 /**
  * @author chengcai
- * @version 2.0 2020.03.02
+ * @version 3.0 2020.03.04
  */
 
 public class ArgsTest2 {
@@ -50,7 +50,5 @@ public class ArgsTest2 {
     private void  assertEquals(boolean Bool, Object name) {
         Assert.assertEquals(Bool, name);
     }
-
-
 }
 
