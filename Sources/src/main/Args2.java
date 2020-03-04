@@ -87,7 +87,6 @@ public class Args2 {
         if (strCmd.charAt(0) != '-') {
             return false;
         } else return true;
-
     }
 
     public Object getValues(String name) {

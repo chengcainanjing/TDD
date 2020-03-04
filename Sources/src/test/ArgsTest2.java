@@ -1,4 +1,4 @@
-import main.Args1;
+import main.Args2;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,7 +11,7 @@ import org.junit.Test;
 public class ArgsTest2 {
     @Test
     public void testNormalCmd() {
-        Args1 args=new Args1("-l true -d /usr/local -p 8080");
+        Args2 args=new Args2("-l true -d /usr/local -p 8080");
         assertEquals(true,args.getValues("-l") );
         assertEquals("/usr/local",args.getValues("-d") );
         assertEquals(8080,args.getValues("-p") );
@@ -19,23 +19,24 @@ public class ArgsTest2 {
 
     @Test
     public void testCmdNegetive() {
-        Args1 args=new Args1("-l -p -d /usr/local");
+        Args2 args=new Args2("-l -p -d /usr/local");
         assertEquals(false,args.getValues("-l") );
-        assertEquals("/usr/local",args.getValues("-d") );
         assertEquals(0,args.getValues("-p") );
+        assertEquals("/usr/local",args.getValues("-d") );
     }
 
     @Test
     public void testCmdMoreParameter() {
-        Args1 args=new Args1("-l -p -9 -d /usr/local -g this,is,a,list");
+        Args2 args=new Args2("-l -p -9 -d /usr/local -g this,is,a,list");
         Assert.assertEquals(false, args.getValues("-l"));
-        assertEquals("/usr/local", args.getValues("-d"));
         assertEquals(-9, args.getValues("-p"));
+        assertEquals("/usr/local", args.getValues("-d"));
         assertEquals("this,is,a,list",args.getValues("-g"));
     }
+
     @Test
     public void testCmdFormat(){
-        Args1 args=new Args1("l -p -9 -d /usr/local");
+        Args2 args=new Args2("l -p -9 -d /usr/local");
         assertEquals(false,args.getCmdFormat("l -p -9 -d /usr/local"));
         assertEquals(true,args.getCmdFormat("-l -p -9 -d /usr/local -g this,is,a,list"));
     }
