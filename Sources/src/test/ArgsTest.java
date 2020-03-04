@@ -51,13 +51,5 @@ public class ArgsTest {
         Assert.assertEquals(Bool, name);
     }
 
-//    @Test
-//    public void testCharAt() {
-////        String strCmd = "l - -9-d/usr/local";
-//        char str="-9".charAt(1);
-//        System.out.println(str);
-////        String[] arrayCmd = strCmd.split("\\s+");
-////        for (int i = 0; i <= arrayCmd.length; i++) Assert.assertEquals(9, arrayCmd[2].charAt(1));
-//
-//    }
+
 }
