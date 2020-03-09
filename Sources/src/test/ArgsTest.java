@@ -39,5 +39,4 @@ public class ArgsTest {
         Assert.assertEquals(true,args.getCmdFormat("-l -p -9 -d /usr/local -g this,is,a,list"));
     }
 
-
 }
